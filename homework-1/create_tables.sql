@@ -20,7 +20,7 @@ CREATE TABLE orders_data
 (
 	order_id int PRIMARY KEY NOT NULL,
 	customer_id varchar(100) REFERENCES customers_data(customers_id) NOT NULL,
-	employee_id int REFERENCES employees(employee_id),
+	employee_id int REFERENCES employees_data(employee_id),
 	order_date date NOT NULL,
 	ship_city text NOT NULL
 );
