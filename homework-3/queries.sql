@@ -16,7 +16,7 @@ ORDER BY customers.company_name;
 SELECT product_name, units_in_stock, suppliers.contact_name, suppliers.phone
 FROM products
 JOIN suppliers USING (supplier_id)
-WHERE discontinued=1 AND units_in_stock<25 AND category_id IN (SELECT category_id FROM categories
+WHERE discontinued=0 AND units_in_stock<25 AND category_id IN (SELECT category_id FROM categories
 															WHERE category_name IN ('Dairy Products', 'Condiments'))
 ORDER BY units_in_stock DESC;
 
